@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Net Host 5</title>
+    <link rel="icon" href="./logo.png" />
+    <link rel="stylesheet" type="text/css" href="/style/index.css" />
+</head>
+
+<body>
+    <header>
+        <img src="./logo.png">
+        <h1>Net Host 5</h1>
+        <ul>
+            <li><a href="">Utilisateur</a></li>
+            <li><a href="">Historique des connexions</a></li>
+        </ul>
+    </header>
+    <div class="main">
+        <h2>Net Host 5</h2>
+        <table id="box-table">
+            <tr>
+                <th>SSID</th>
+                <th>Adresse MAC</th>
+                <th>Adresse IP</th>
+                <th>Etat</th>
+            </tr>
+            <tr>
+                <td>Net Host 5</td>
+                <td>00:00:00:00:00:00</td>
+                <td>192.168.0.1</td>
+                <td>Connecté</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        // Fonction pour générer les lignes du tableau
+        function generateTableRows(data) {
+            var table = document.getElementById("box-table");
+            for (var i = 0; i < data.length; i++) {
+                var box = data[i];
+                var row = document.createElement("tr");
+                var ssidCell = document.createElement("td");
+                var macCell = document.createElement("td");
+                var ipCell = document.createElement("td");
+                var etatCell = document.createElement("td");
+                ssidCell.textContent = box.ssid;
+                macCell.textContent = box.mac;
+                ipCell.textContent = box.ip;
+                etatCell.textContent = box.etat;
+                row.appendChild(ssidCell);
+                row.appendChild(macCell);
+                row.appendChild(ipCell);
+                row.appendChild(etatCell);
+                table.appendChild(row);
+            }
+        }
+
+        // Charger les données à partir du fichier JSON
+        fetch("wifi_boxes.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                // Appelle la fonction pour générer les lignes du tableau avec les données JSON
+                generateTableRows(data);
+            })
+            .catch(function(error) {
+                console.log("Une erreur s'est produite lors du chargement du fichier JSON :", error);
+            });
+    </script>
+    <script src="/script/conect.js"></script>
+</body>
+
+</html>
