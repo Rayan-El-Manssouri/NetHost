@@ -1,6 +1,8 @@
-# Net Host 5
+# Python Wi-Fi Box App
 
-![Logo](./assets/logo.png)
+<div align="center">
+  <img src="./assets/logo.png" alt="Logo" height="200">
+</div>
 
 This code is a Python application that turns your computer into a Wi-Fi box. It creates a local web server on port 8080, allowing you to access static files and manage Wi-Fi boxes from a web browser.
 
