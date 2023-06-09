@@ -4,11 +4,19 @@
   <img src="./assets/logo.png" alt="Logo" height="200">
 </div>
 
-This code is a Python application that turns your computer into a Wi-Fi box. It creates a local web server on port 8080, allowing you to access static files and manage Wi-Fi boxes from a web browser.
+## Table des matières
+- [Introduction](#introduction)
+- [Prérequis](#prérequis)
+- [Configuration](#configuration)
+- [Utilisation](#utilisation)
+- [Remarque](#remarque)
 
-## Prerequisites
+## Introduction
+Ce code est une application Python qui transforme votre ordinateur en une box Wi-Fi. Il crée un serveur web local sur le port 8080, vous permettant d'accéder à des fichiers statiques et de gérer des boîtes Wi-Fi à partir d'un navigateur web.
+
+## Prérequis
 - Python 3.x
-- The following packages need to be installed:
+- Les packages suivants doivent être installés :
   - `socket`
   - `os`
   - `threading`
@@ -20,24 +28,24 @@ This code is a Python application that turns your computer into a Wi-Fi box. It 
   - `pystray`
 
 ## Configuration
-Before running the application, make sure to configure the following:
+Avant d'exécuter l'application, assurez-vous de configurer les éléments suivants :
 
-### Directory for Static Files
-The `www` directory contains the static files (HTML, CSS, JavaScript) that you want to make accessible through the local web server. Place your files in this directory.
+### Répertoire des fichiers statiques
+Le répertoire `www` contient les fichiers statiques (HTML, CSS, JavaScript) que vous souhaitez rendre accessibles via le serveur web local. Placez vos fichiers dans ce répertoire.
 
-### Path to the Logo Image
-Specify the path to your own logo image by replacing the path `./assets/logo.png` with the path to your image.
+### Chemin de l'image du logo
+Spécifiez le chemin vers votre propre image de logo en remplaçant le chemin `./assets/logo.png` par le chemin de votre image.
 
-## Usage
-1. Run the Python script using the command `python script.py`.
-2. The application will start and display the logo in the system tray.
-3. Right-click on the icon to show the menu.
-4. Select "Open Web Server" to start the server.
-5. The server is now running and accessible at `http://localhost:8080`.
-6. The static files present in the `www` directory can be viewed from the browser.
-7. The `index.html` file is specially handled, and whenever it is loaded, the list of available Wi-Fi boxes is updated and saved to the `wifi_boxes.json` file.
-8. To stop the server, select "Quit" from the menu.
+## Utilisation
+1. Exécutez le script Python à l'aide de la commande `python script.py`.
+2. L'application démarrera et affichera le logo dans la barre d'état système.
+3. Cliquez avec le bouton droit de la souris sur l'icône pour afficher le menu.
+4. Sélectionnez "Ouvrir le serveur web" pour démarrer le serveur.
+5. Le serveur est maintenant en cours d'exécution et accessible à l'adresse `http://localhost:8080`.
+6. Les fichiers statiques présents dans le répertoire `www` peuvent être consultés à partir du navigateur.
+7. Le fichier `index.html` est spécialement pris en charge et chaque fois qu'il est chargé, la liste des boîtes Wi-Fi disponibles est mise à jour et enregistrée dans le fichier `wifi_boxes.json`.
+8. Pour arrêter le serveur, sélectionnez "Quitter" dans le menu.
 
-## Note
-- Make sure appropriate permissions and firewalls are configured to allow access to the server on port 8080.
-- The application uses the `wmi` library to retrieve Wi-Fi box information. Ensure that you have sufficient privileges to access this information.
+## Remarque
+- Assurez-vous que les autorisations et les pare-feux appropriés sont configurés pour permettre l'accès au serveur sur le port 8080.
+- L'application utilise la bibliothèque `wmi` pour récupérer les informations sur les boîtes Wi-Fi. Assurez-vous que vous avez les privilèges suffisants pour accéder à ces informations.
