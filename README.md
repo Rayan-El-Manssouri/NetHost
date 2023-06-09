@@ -37,7 +37,7 @@ Le répertoire `www` contient les fichiers statiques (HTML, CSS, JavaScript) que
 Spécifiez le chemin vers votre propre image de logo en remplaçant le chemin `./assets/logo.png` par le chemin de votre image.
 
 ## Utilisation
-1. Exécutez le script Python à l'aide de la commande `python script.py`.
+1. Exécutez le script Python à l'aide de la commande `python index.py`.
 2. L'application démarrera et affichera le logo dans la barre d'état système.
 3. Cliquez avec le bouton droit de la souris sur l'icône pour afficher le menu.
 4. Sélectionnez "Ouvrir le serveur web" pour démarrer le serveur.
