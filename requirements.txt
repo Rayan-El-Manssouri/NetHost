@@ -1,0 +1,9 @@
+socket
+os
+threading
+webbrowser
+json
+wmi
+win10toast
+PIL
+pystray
