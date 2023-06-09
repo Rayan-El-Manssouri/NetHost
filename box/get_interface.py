@@ -7,7 +7,7 @@ def get_wifi_boxes():
     interfaces = wmi_service.Win32_NetworkAdapter(NetConnectionID="Wi-Fi")
 
     for interface in interfaces:
-        ip = get_interface_ip(interface.Index)
+        ip = get_interface_ip.get_interface_ip(interface.Index)
         
         wifi_box = {
             "ssid": interface.NetConnectionID,

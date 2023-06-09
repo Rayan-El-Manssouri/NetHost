@@ -2,7 +2,6 @@ import os
 from box.save import save_wifi_boxes_json
 DIRECTORY = 'www'
 
-
 def handle_request(client_socket):
     request_data = client_socket.recv(1024).decode('utf-8')
     request_lines = request_data.split('\r\n')
